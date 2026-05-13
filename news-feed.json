@@ -1,0 +1,52 @@
+[
+  {
+    "id": "ema-biosimilar-2025-05",
+    "title_zh": "欧洲药品管理局发布生物类似药新指南，简化申报流程",
+    "title_en": "EMA Publishes Updated Biosimilar Guidelines, Streamlining Approval Pathways",
+    "excerpt_zh": "欧洲药品管理局于2025年5月正式发布生物类似药修订指南，重点简化临床数据要求并缩短审评周期，为生物类似药市场进入提供新机遇。",
+    "excerpt_en": "The European Medicines Agency released revised biosimilar guidelines in May 2025, streamlining clinical data requirements and shortening review timelines, opening new market access opportunities.",
+    "category": "regulatory",
+    "date": "2025-05-10",
+    "url": "https://www.ema.europa.eu"
+  },
+  {
+    "id": "cdmo-china-expansion-2025-04",
+    "title_zh": "全球CDMO市场规模预计2030年突破3000亿美元，中国产能加速扩张",
+    "title_en": "Global CDMO Market to Exceed $300B by 2030 as China Capacity Surges",
+    "excerpt_zh": "据行业报告显示，受生物药需求激增驱动，全球CDMO市场持续高速增长，中国头部CDMO企业在GLP-1及ADC领域产能布局明显加快。",
+    "excerpt_en": "Industry reports indicate the global CDMO market continues rapid growth driven by biologics demand, with leading Chinese CDMOs aggressively expanding capacity in GLP-1 and ADC segments.",
+    "category": "cdmo",
+    "date": "2025-04-28",
+    "url": "https://www.contractpharma.com"
+  },
+  {
+    "id": "gmp-audit-asia-2025-04",
+    "title_zh": "亚太区GMP审计需求激增，原料药供应链合规压力持续上升",
+    "title_en": "Asia-Pacific GMP Audit Demand Surges Amid Rising API Supply Chain Compliance Pressure",
+    "excerpt_zh": "2025年第一季度，亚太地区GMP审计需求同比增长34%，跨国药企对原料药供应商的合规核查标准进一步提高，第三方审计服务需求旺盛。",
+    "excerpt_en": "Q1 2025 saw a 34% year-on-year surge in Asia-Pacific GMP audit demand, as multinational pharma companies raise compliance standards for API suppliers and third-party audit services boom.",
+    "category": "regulatory",
+    "date": "2025-04-15",
+    "url": "https://www.pharmiweb.com"
+  },
+  {
+    "id": "cosmetic-ingredient-trend-2025-03",
+    "title_zh": "功能性化妆品原料需求持续升温，透明质酸与多肽类成分备受关注",
+    "title_en": "Functional Cosmetic Ingredient Demand Heats Up: Hyaluronic Acid and Peptides in Focus",
+    "excerpt_zh": "2025年全球功能性化妆品原料市场持续扩张，消费者对透明质酸、胶原蛋白肽等成分需求显著提升，天然来源和可持续原料成为品牌采购新导向。",
+    "excerpt_en": "The global functional cosmetics ingredient market continues expanding in 2025, with consumer demand rising sharply for hyaluronic acid and collagen peptides, while natural and sustainable sourcing becomes the new procurement priority.",
+    "category": "market",
+    "date": "2025-03-20",
+    "url": "https://www.cosmeticsandtoiletries.com"
+  },
+  {
+    "id": "medical-device-import-2025-03",
+    "title_zh": "中国医疗器械进口监管新规落地，注册申报周期将大幅缩短",
+    "title_en": "China's New Medical Device Import Regulations Take Effect, Slashing Registration Timelines",
+    "excerpt_zh": "国家药品监督管理局2025年3月正式实施医疗器械进口新规，优化注册申报流程，预计高风险器械审批周期缩短至12个月内，显著降低市场准入门槛。",
+    "excerpt_en": "China's NMPA implemented new medical device import regulations in March 2025, optimizing the registration process and projecting high-risk device approval timelines to fall within 12 months, significantly lowering market access barriers.",
+    "category": "regulatory",
+    "date": "2025-03-08",
+    "url": "https://www.nmpa.gov.cn"
+  }
+]

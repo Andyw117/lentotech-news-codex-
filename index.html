@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>伦拓科技 Lentotech | Integrated Life Sciences Services</title>
+  <meta name="description" content="伦拓科技 Lentotech 提供生物医药、医疗器械、兽药及功能原料领域的全球分销、GMP合规、注册申报、进出口贸易与CDMO协同服务。">
+  <meta name="keywords" content="伦拓科技,Lentotech,生物医药供应链,GMP审计,CDMO,注册申报,医疗器械,功能性原料,biopharma supply chain">
+  <meta name="author" content="Lentotech 伦拓科技">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#047857">
+  <link rel="canonical" href="https://lentotech.com/">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lentotech.com/">
+  <meta property="og:title" content="伦拓科技 Lentotech | Integrated Life Sciences Services">
+  <meta property="og:description" content="全球生物医药供应链整合服务商，连接分销、合规、注册、贸易与CDMO资源。">
+  <meta property="og:image" content="https://lentotech.com/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name" content="Lentotech 伦拓科技">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="伦拓科技 Lentotech | Integrated Life Sciences Services">
+  <meta name="twitter:description" content="Integrated biopharma supply chain, compliance, registration, trade and CDMO services.">
+  <meta name="twitter:image" content="https://lentotech.com/og-cover.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background: #f8fafc;
+      color: #0f172a;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-rendering: optimizeLegibility;
+    }
+    body::selection { background: #bbf7d0; color: #0f172a; }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.86);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+    .brand-mark {
+      background: linear-gradient(135deg, #0369a1 0%, #059669 58%, #34d399 100%);
+      box-shadow: 0 18px 36px -24px rgba(4, 120, 87, 0.8);
+    }
+    .hero-media {
+      background-image: linear-gradient(90deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.76) 46%, rgba(15, 23, 42, 0.34)), url("./og-cover.png");
+      background-position: center;
+      background-size: cover;
+    }
+    .technical-grid {
+      background-image: linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.75), transparent 82%);
+    }
+    .section-kicker {
+      color: #047857;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .btn-primary,
+    .btn-secondary,
+    .btn-dark {
+      align-items: center;
+      border-radius: 999px;
+      display: inline-flex;
+      font-size: 0.94rem;
+      font-weight: 800;
+      gap: 0.55rem;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0.82rem 1.25rem;
+      text-decoration: none;
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+    }
+    .btn-primary {
+      background: #059669;
+      color: #fff;
+      box-shadow: 0 18px 35px -24px rgba(5,150,105,0.95);
+    }
+    .btn-primary:hover { background: #047857; transform: translateY(-1px) scale(1.02); }
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.32);
+      color: #fff;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.2); transform: translateY(-1px) scale(1.02); }
+    .btn-dark { background: #0f172a; color: #fff; }
+    .btn-dark:hover { background: #111827; transform: translateY(-1px) scale(1.02); }
+    .premium-card {
+      background: rgba(255,255,255,0.94);
+      border: 1px solid rgba(226,232,240,0.92);
+      border-radius: 18px;
+      box-shadow: 0 18px 55px -42px rgba(15,23,42,0.7);
+      transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+    }
+    .premium-card:hover {
+      border-color: rgba(5,150,105,0.28);
+      box-shadow: 0 24px 70px -44px rgba(15,23,42,0.85);
+      transform: translateY(-3px);
+    }
+    .accent-rule {
+      background: linear-gradient(90deg, #059669, #0ea5e9, transparent);
+      height: 2px;
+      width: 100%;
+    }
+    .badge-regulatory { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
+    .badge-market { background: #fdf4ff; color: #7e22ce; border-color: #e9d5ff; }
+    .badge-science { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
+    .badge-cdmo { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+    .badge-trade { background: #fefce8; color: #854d0e; border-color: #fde68a; }
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 680ms ease, transform 680ms ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .spinner {
+      animation: spin 0.9s linear infinite;
+      border: 3px solid #d1fae5;
+      border-radius: 999px;
+      border-top-color: #059669;
+      height: 36px;
+      width: 36px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+    @media (max-width: 767px) { body { padding-bottom: 76px; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .btn-primary:hover,
+      .btn-secondary:hover,
+      .btn-dark:hover,
+      .premium-card:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-white focus:px-5 focus:py-3 focus:text-sm focus:font-bold focus:text-slate-900 focus:shadow-lg">跳转到正文 / Skip to content</a>
+
+  <header class="glass-nav sticky top-0 z-50">
+    <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="主导航 / Primary navigation">
+      <a href="index.html" class="flex min-h-12 items-center gap-3 rounded-full pr-3 no-underline" aria-label="Lentotech 首页 / Lentotech home">
+        <span class="brand-mark flex h-10 w-10 items-center justify-center rounded-xl text-white" aria-hidden="true">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+            <path d="M12 3 4 7l8 4 8-4-8-4ZM4 12l8 4 8-4M4 17l8 4 8-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block text-base font-black text-slate-950">Lentotech</span>
+          <span class="block text-xs font-semibold text-emerald-700">伦拓科技</span>
+        </span>
+      </a>
+      <div class="hidden items-center gap-7 md:flex">
+        <a href="#business" class="text-sm font-semibold text-slate-600 no-underline transition hover:text-emerald-700">业务 / Business</a>
+        <a href="news.html" class="text-sm font-semibold text-slate-600 no-underline transition hover:text-emerald-700">动态 / News</a>
+        <a href="#process" class="text-sm font-semibold text-slate-600 no-underline transition hover:text-emerald-700">流程 / Process</a>
+        <a href="#contact" class="text-sm font-semibold text-slate-600 no-underline transition hover:text-emerald-700">联系 / Contact</a>
+        <a href="mailto:info@lentotech.com?subject=Lentotech%20Business%20Inquiry%20%2F%20%E4%BC%A6%E6%8B%93%E7%A7%91%E6%8A%80%E4%B8%9A%E5%8A%A1%E5%92%A8%E8%AF%A2" class="btn-primary min-h-11 px-5 py-2 text-sm">快速询盘 / Inquire</a>
+      </div>
+      <button id="hamburger" class="inline-flex min-h-12 min-w-12 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm md:hidden" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="打开菜单 / Open menu">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="border-t border-slate-200 bg-white/95 px-4 py-3 shadow-sm md:hidden">
+      <div class="mx-auto grid max-w-7xl gap-1">
+        <a href="#business" class="min-h-12 rounded-xl px-4 py-3 text-sm font-bold text-slate-700 no-underline hover:bg-emerald-50">业务 / Business</a>
+        <a href="news.html" class="min-h-12 rounded-xl px-4 py-3 text-sm font-bold text-slate-700 no-underline hover:bg-emerald-50">动态 / News</a>
+        <a href="#process" class="min-h-12 rounded-xl px-4 py-3 text-sm font-bold text-slate-700 no-underline hover:bg-emerald-50">流程 / Process</a>
+        <a href="#contact" class="min-h-12 rounded-xl px-4 py-3 text-sm font-bold text-slate-700 no-underline hover:bg-emerald-50">联系 / Contact</a>
+        <a href="mailto:info@lentotech.com?subject=Lentotech%20Business%20Inquiry%20%2F%20%E4%BC%A6%E6%8B%93%E7%A7%91%E6%8A%80%E4%B8%9A%E5%8A%A1%E5%92%A8%E8%AF%A2" class="mt-2 inline-flex min-h-12 items-center justify-center rounded-full bg-emerald-600 px-5 py-3 text-sm font-black text-white no-underline">快速询盘 / Inquire</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero-media relative isolate overflow-hidden">
+      <div class="technical-grid absolute inset-0 -z-10"></div>
+      <div class="mx-auto grid min-h-[calc(100svh-4rem)] max-w-7xl items-end gap-10 px-4 pb-10 pt-20 sm:px-6 lg:grid-cols-12 lg:px-8 lg:pb-14">
+        <div class="max-w-4xl lg:col-span-8">
+          <p class="reveal mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-bold text-emerald-100 backdrop-blur">Lentotech Integrated Life Sciences Services / 伦拓科技综合生命科学服务</p>
+          <h1 class="reveal text-4xl font-black leading-tight text-white sm:text-5xl lg:text-7xl">全球生物医药供应链，<span class="block text-emerald-200">从资源到合规交付。</span></h1>
+          <p class="reveal mt-6 max-w-3xl text-lg leading-relaxed text-slate-100 sm:text-xl">
+            连接生物医药、医疗器械、兽药与功能原料生态，为客户提供分销、GMP审计、注册申报、进出口贸易与CDMO协同。
+            <span class="block pt-2 text-base text-slate-300 sm:text-lg">Global distribution, compliance, registration, trade and CDMO coordination for life sciences companies entering complex markets.</span>
+          </p>
+          <div class="reveal mt-8 flex flex-col gap-3 sm:flex-row">
+            <a class="btn-primary" href="mailto:info@lentotech.com?subject=Supply%20Chain%20Solution%20Request%20%2F%20%E4%BE%9B%E5%BA%94%E9%93%BE%E6%96%B9%E6%A1%88%E5%92%A8%E8%AF%A2">
+              获取供应链方案 / Request Solution
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </a>
+            <a class="btn-secondary" href="news.html">
+              查看最新行业动态 / Latest News
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="reveal grid gap-3 sm:grid-cols-3 lg:col-span-4 lg:grid-cols-1">
+          <div class="rounded-2xl border border-white/15 bg-white/10 p-4 text-white backdrop-blur">
+            <p class="text-3xl font-black">4</p>
+            <p class="mt-1 text-sm leading-relaxed text-slate-100">核心业务板块 / Core service lines</p>
+          </div>
+          <div class="rounded-2xl border border-white/15 bg-white/10 p-4 text-white backdrop-blur">
+            <p class="text-3xl font-black">GMP</p>
+            <p class="mt-1 text-sm leading-relaxed text-slate-100">合规审计与注册支持 / Audit and filing support</p>
+          </div>
+          <div class="rounded-2xl border border-white/15 bg-white/10 p-4 text-white backdrop-blur">
+            <p class="text-3xl font-black">CDMO</p>
+            <p class="mt-1 text-sm leading-relaxed text-slate-100">开发生产资源协同 / Development and manufacturing coordination</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-slate-200 bg-white py-5">
+      <div class="mx-auto grid max-w-7xl gap-3 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <p class="rounded-full border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-bold text-slate-700">Biopharmaceuticals / 生物医药</p>
+        <p class="rounded-full border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-bold text-slate-700">Medical Devices / 医疗器械</p>
+        <p class="rounded-full border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-bold text-slate-700">Veterinary Medicine / 兽药健康</p>
+        <p class="rounded-full border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-bold text-slate-700">Cosmetic Ingredients / 功能原料</p>
+      </div>
+    </section>
+
+    <section id="business" class="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal grid gap-8 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7">
+            <p class="section-kicker">Core Business / 核心业务</p>
+            <h2 class="mt-3 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">把资源、合规和交付变成可执行路径。<span class="block text-slate-500">From opportunity to executable market access.</span></h2>
+          </div>
+          <p class="text-base leading-relaxed text-slate-600 lg:col-span-5">
+            面向采购、法规、质量和商务团队，伦拓科技将供应商网络、监管经验与跨境执行能力组合为清晰的项目路径。
+            <span class="block pt-2">For procurement, regulatory, quality and commercial teams, Lentotech turns supplier access and compliance requirements into a coordinated operating plan.</span>
+          </p>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-2">
+          <article class="premium-card reveal p-6">
+            <div class="accent-rule mb-6"></div>
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-black uppercase text-emerald-700">Distribution / 分销</p>
+                <h3 class="mt-2 text-2xl font-black text-slate-950">原料与产品分销</h3>
+              </div>
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-700" aria-hidden="true">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4 7h16M6 17h12M7 7l2 10M17 7l-2 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+              </span>
+            </div>
+            <p class="mt-4 leading-relaxed text-slate-600">覆盖生物医药活性成分、食品功能配料、功效化妆品原料及高值医疗器械，连接优质供应商与终端制造商。</p>
+            <p class="mt-3 text-sm leading-relaxed text-slate-500">Premium sourcing and distribution across biopharma APIs, functional food ingredients, cosmetic actives and medical devices.</p>
+            <a class="mt-6 inline-flex text-sm font-black text-emerald-700 no-underline hover:text-emerald-900" href="mailto:info@lentotech.com?subject=Distribution%20Inquiry%20%2F%20%E5%88%86%E9%94%80%E5%92%A8%E8%AF%A2">咨询分销资源 / Ask about sourcing</a>
+          </article>
+
+          <article class="premium-card reveal p-6">
+            <div class="accent-rule mb-6"></div>
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-black uppercase text-blue-700">Compliance / 合规</p>
+                <h3 class="mt-2 text-2xl font-black text-slate-950">GMP审计与注册申报</h3>
+              </div>
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-700" aria-hidden="true">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="2"></path><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </span>
+            </div>
+            <p class="mt-4 leading-relaxed text-slate-600">提供现场审核、文件体系评估、整改支持和多国注册申报代理，帮助客户降低准入不确定性。</p>
+            <p class="mt-3 text-sm leading-relaxed text-slate-500">On-site audits, document assessment, remediation support and multi-market filing agency services.</p>
+            <a class="mt-6 inline-flex text-sm font-black text-emerald-700 no-underline hover:text-emerald-900" href="mailto:info@lentotech.com?subject=GMP%20and%20Regulatory%20Inquiry%20%2F%20GMP%E4%B8%8E%E6%B3%A8%E5%86%8C%E5%92%A8%E8%AF%A2">预约合规沟通 / Discuss compliance</a>
+          </article>
+
+          <article class="premium-card reveal p-6">
+            <div class="accent-rule mb-6"></div>
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-black uppercase text-amber-700">Trade / 贸易</p>
+                <h3 class="mt-2 text-2xl font-black text-slate-950">供应链与全球贸易</h3>
+              </div>
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-amber-50 text-amber-700" aria-hidden="true">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="2"></path></svg>
+              </span>
+            </div>
+            <p class="mt-4 leading-relaxed text-slate-600">整合进出口贸易、供应商准入、绩效管理与物流协同，保障质量、交期与合规性。</p>
+            <p class="mt-3 text-sm leading-relaxed text-slate-500">Import-export operations, supplier qualification, performance management and logistics coordination.</p>
+            <a class="mt-6 inline-flex text-sm font-black text-emerald-700 no-underline hover:text-emerald-900" href="mailto:info@lentotech.com?subject=Trade%20and%20Logistics%20Inquiry%20%2F%20%E8%B4%B8%E6%98%93%E7%89%A9%E6%B5%81%E5%92%A8%E8%AF%A2">获取贸易支持 / Request trade support</a>
+          </article>
+
+          <article class="premium-card reveal p-6">
+            <div class="accent-rule mb-6"></div>
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-black uppercase text-purple-700">CDMO / 开发生产</p>
+                <h3 class="mt-2 text-2xl font-black text-slate-950">CDMO服务协同</h3>
+              </div>
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-purple-50 text-purple-700" aria-hidden="true">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none"><path d="M9 3v6l-5 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 3h8M9 14h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+              </span>
+            </div>
+            <p class="mt-4 leading-relaxed text-slate-600">对接合同开发与生产资源，覆盖早期工艺开发、中试放大至商业化生产的关键节点。</p>
+            <p class="mt-3 text-sm leading-relaxed text-slate-500">CDMO coordination from process development and pilot scale-up to commercial manufacturing readiness.</p>
+            <a class="mt-6 inline-flex text-sm font-black text-emerald-700 no-underline hover:text-emerald-900" href="mailto:info@lentotech.com?subject=CDMO%20Inquiry%20%2F%20CDMO%E6%9C%8D%E5%8A%A1%E5%92%A8%E8%AF%A2">匹配CDMO资源 / Match CDMO resources</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal grid gap-8 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <p class="section-kicker">Operating Process / 协作流程</p>
+            <h2 class="mt-3 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">让客户更快获得清晰答案。</h2>
+            <p class="mt-5 leading-relaxed text-slate-600">从需求澄清到供应商匹配、法规路径评估和交付执行，我们把复杂跨境项目拆成可追踪步骤。</p>
+          </div>
+          <div class="grid gap-4 lg:col-span-7">
+            <div class="premium-card reveal grid gap-4 p-5 sm:grid-cols-[56px_1fr]"><div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-lg font-black text-white">01</div><div><h3 class="text-lg font-black text-slate-950">需求澄清 / Requirement Mapping</h3><p class="mt-2 text-sm leading-relaxed text-slate-600">确认产品类型、目标市场、质量标准、交期与预算边界。</p></div></div>
+            <div class="premium-card reveal grid gap-4 p-5 sm:grid-cols-[56px_1fr]"><div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-700 text-lg font-black text-white">02</div><div><h3 class="text-lg font-black text-slate-950">资源匹配 / Resource Matching</h3><p class="mt-2 text-sm leading-relaxed text-slate-600">基于供应商资质、合规历史和交付能力推荐可执行选项。</p></div></div>
+            <div class="premium-card reveal grid gap-4 p-5 sm:grid-cols-[56px_1fr]"><div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-700 text-lg font-black text-white">03</div><div><h3 class="text-lg font-black text-slate-950">合规评估 / Compliance Review</h3><p class="mt-2 text-sm leading-relaxed text-slate-600">梳理GMP审计、注册申报和跨境文件要求，降低准入风险。</p></div></div>
+            <div class="premium-card reveal grid gap-4 p-5 sm:grid-cols-[56px_1fr]"><div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-700 text-lg font-black text-white">04</div><div><h3 class="text-lg font-black text-slate-950">贸易交付 / Trade Execution</h3><p class="mt-2 text-sm leading-relaxed text-slate-600">协同采购、进口出口、物流和资料交接，形成闭环交付。</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news-preview" class="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="section-kicker">News Center / 行业动态</p>
+            <h2 class="mt-3 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">客户需要的信息，第一时间可检索。</h2>
+            <p class="mt-4 max-w-3xl leading-relaxed text-slate-600">首页展示最新三条新闻，完整归档由 news-feed.json 驱动，新增新闻只需更新数据文件并推送。</p>
+          </div>
+          <a href="news.html" class="btn-dark w-full sm:w-auto">进入新闻中心 / Open News Center</a>
+        </div>
+        <div id="news-loading" class="mt-10 flex flex-col items-center justify-center gap-4 rounded-2xl border border-slate-200 bg-white py-12">
+          <div class="spinner"></div>
+          <p class="text-sm font-semibold text-slate-500">加载最新动态 / Loading latest news</p>
+        </div>
+        <div id="news-error" class="mt-10 hidden rounded-2xl border border-rose-100 bg-white p-8 text-center">
+          <p class="font-black text-slate-950">暂时无法加载新闻 / Unable to load news</p>
+          <button class="btn-primary mt-5" type="button" onclick="loadNews()">重试 / Retry</button>
+        </div>
+        <div id="news-grid" class="mt-10 hidden grid gap-5 md:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="premium-card reveal overflow-hidden">
+          <div class="grid gap-0 lg:grid-cols-12">
+            <div class="bg-slate-950 p-6 text-white sm:p-8 lg:col-span-5 lg:p-10">
+              <p class="text-sm font-black uppercase tracking-[0.18em] text-emerald-300">Contact / 联系我们</p>
+              <h2 class="mt-4 text-3xl font-black leading-tight sm:text-4xl">把您的需求发给我们，获得下一步建议。</h2>
+              <p class="mt-5 leading-relaxed text-slate-300">请在邮件中说明产品类别、目标市场、预计用量、法规状态和期望交期。我们会据此判断供应链与合规路径。</p>
+              <div class="mt-8 grid gap-3 text-sm text-slate-300">
+                <p><span class="font-black text-white">Global:</span> info@lentotech.com</p>
+                <p><span class="font-black text-white">Regional:</span> info@zbp-tec.cn</p>
+                <p><span class="font-black text-white">Website:</span> lentotech.com</p>
+              </div>
+            </div>
+            <div class="grid gap-4 p-6 sm:p-8 lg:col-span-7 lg:p-10">
+              <a class="premium-card p-5 no-underline" href="mailto:info@lentotech.com?subject=New%20Business%20Inquiry%20%2F%20%E6%96%B0%E4%B8%9A%E5%8A%A1%E5%92%A8%E8%AF%A2&body=Product%20category%20%2F%20%E4%BA%A7%E5%93%81%E7%B1%BB%E5%88%AB%3A%0ATarget%20market%20%2F%20%E7%9B%AE%E6%A0%87%E5%B8%82%E5%9C%BA%3A%0ARequired%20quantity%20%2F%20%E9%9C%80%E6%B1%82%E9%87%8F%3A%0ACompliance%20status%20%2F%20%E5%90%88%E8%A7%84%E7%8A%B6%E6%80%81%3A%0AExpected%20timeline%20%2F%20%E6%9C%9F%E6%9C%9B%E4%BA%A4%E6%9C%9F%3A%0A">
+                <div class="flex items-start justify-between gap-4"><div><p class="text-sm font-black text-emerald-700">业务询盘 / Business inquiry</p><h3 class="mt-2 text-xl font-black text-slate-950">发送结构化需求邮件</h3><p class="mt-2 text-sm leading-relaxed text-slate-600">邮件已预填关键问题，客户可直接补充信息并发送。</p></div><span class="text-2xl font-black text-slate-300">↗</span></div>
+              </a>
+              <a class="premium-card p-5 no-underline" href="news.html">
+                <div class="flex items-start justify-between gap-4"><div><p class="text-sm font-black text-sky-700">行业信息 / Market intelligence</p><h3 class="mt-2 text-xl font-black text-slate-950">进入新闻中心检索动态</h3><p class="mt-2 text-sm leading-relaxed text-slate-600">按监管、市场、科学、CDMO、贸易物流分类快速筛选。</p></div><span class="text-2xl font-black text-slate-300">↗</span></div>
+              </a>
+              <a class="premium-card p-5 no-underline" href="https://wa.me/?text=https%3A%2F%2Flentotech.com%2F%20Lentotech%20%E4%BC%A6%E6%8B%93%E7%A7%91%E6%8A%80%20Integrated%20Life%20Sciences%20Services" target="_blank" rel="noopener noreferrer">
+                <div class="flex items-start justify-between gap-4"><div><p class="text-sm font-black text-emerald-700">WhatsApp 分享 / WhatsApp share</p><h3 class="mt-2 text-xl font-black text-slate-950">转发网站给团队或客户</h3><p class="mt-2 text-sm leading-relaxed text-slate-600">便于移动端快速分享，适合 WhatsApp 与跨境沟通场景。</p></div><span class="text-2xl font-black text-slate-300">↗</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/95 px-3 py-3 shadow-[0_-14px_35px_-28px_rgba(15,23,42,0.75)] backdrop-blur md:hidden">
+    <div class="grid grid-cols-3 gap-2">
+      <a class="rounded-full bg-slate-950 px-3 py-3 text-center text-xs font-black text-white no-underline" href="mailto:info@lentotech.com?subject=Lentotech%20Inquiry">邮件咨询</a>
+      <a class="rounded-full bg-emerald-600 px-3 py-3 text-center text-xs font-black text-white no-underline" href="#contact">快速询盘</a>
+      <a class="rounded-full border border-slate-200 bg-white px-3 py-3 text-center text-xs font-black text-slate-800 no-underline" href="news.html">行业动态</a>
+    </div>
+  </div>
+
+  <footer class="bg-slate-950 px-4 py-10 text-slate-400 sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 border-t border-slate-800 pt-8 md:flex-row md:items-center md:justify-between">
+      <div class="flex items-center gap-3">
+        <span class="brand-mark flex h-9 w-9 items-center justify-center rounded-xl text-white" aria-hidden="true"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7l8 4 8-4-8-4ZM4 12l8 4 8-4M4 17l8 4 8-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        <div><p class="font-black text-white">Lentotech 伦拓科技</p><p class="text-sm">Integrated Life Sciences Services</p></div>
+      </div>
+      <p class="text-sm">© 2026 伦拓科技 Lentotech. All rights reserved.</p>
+      <div class="flex flex-wrap gap-4 text-sm">
+        <a href="index.html" class="font-semibold text-slate-400 no-underline hover:text-emerald-300">首页 / Home</a>
+        <a href="news.html" class="font-semibold text-slate-400 no-underline hover:text-emerald-300">动态 / News</a>
+        <a href="#contact" class="font-semibold text-slate-400 no-underline hover:text-emerald-300">联系 / Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', () => {
+        const open = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', String(!open));
+        hamburger.setAttribute('aria-label', open ? '打开菜单 / Open menu' : '关闭菜单 / Close menu');
+        mobileMenu.classList.toggle('open', !open);
+      });
+      mobileMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.setAttribute('aria-label', '打开菜单 / Open menu');
+          mobileMenu.classList.remove('open');
+        });
+      });
+    }
+
+    const revealObserver = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 }) : null;
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+      if (revealObserver) revealObserver.observe(el);
+      else el.classList.add('visible');
+    });
+
+    const CATEGORY_META = {
+      regulatory: { label: '监管合规 / Regulatory', cls: 'badge-regulatory' },
+      market: { label: '市场动态 / Market', cls: 'badge-market' },
+      science: { label: '科学前沿 / Science', cls: 'badge-science' },
+      cdmo: { label: 'CDMO资讯 / CDMO', cls: 'badge-cdmo' },
+      trade: { label: '贸易物流 / Trade', cls: 'badge-trade' }
+    };
+
+    function escapeHTML(value) {
+      return String(value || '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+    }
+
+    function formatDate(dateString) {
+      const date = new Date(`${dateString}T00:00:00`);
+      if (Number.isNaN(date.getTime())) return escapeHTML(dateString);
+      const zh = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+      const en = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+      return `${zh} / ${en}`;
+    }
+
+    function truncate(text, maxLength) {
+      const safe = String(text || '');
+      return safe.length > maxLength ? `${safe.slice(0, maxLength)}…` : safe;
+    }
+
+    function renderNewsCard(item) {
+      const meta = CATEGORY_META[item.category] || { label: item.category || 'News', cls: 'badge-cdmo' };
+      return `
+        <article class="premium-card reveal p-6">
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="${meta.cls} rounded-full border px-3 py-1 text-xs font-black">${escapeHTML(meta.label)}</span>
+            <time class="text-xs font-bold text-slate-400" datetime="${escapeHTML(item.date)}">${formatDate(item.date)}</time>
+          </div>
+          <h3 class="mt-5 text-xl font-black leading-snug text-slate-950">${escapeHTML(item.title_zh)}</h3>
+          <p class="mt-2 text-sm font-semibold leading-relaxed text-slate-500">${escapeHTML(item.title_en)}</p>
+          <p class="mt-4 text-sm leading-relaxed text-slate-600">${escapeHTML(truncate(item.excerpt_zh, 90))}</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a class="text-sm font-black text-emerald-700 no-underline hover:text-emerald-900" href="news.html#entry-${encodeURIComponent(item.id)}">阅读全文 / Read more</a>
+            <a class="text-sm font-black text-slate-500 no-underline hover:text-slate-900" href="mailto:info@lentotech.com?subject=Question%20about%20${encodeURIComponent(item.title_en || item.title_zh || 'news')}">咨询影响 / Ask impact</a>
+          </div>
+        </article>
+      `;
+    }
+
+    async function loadNews() {
+      const loading = document.getElementById('news-loading');
+      const error = document.getElementById('news-error');
+      const grid = document.getElementById('news-grid');
+      if (!loading || !error || !grid) return;
+      loading.classList.remove('hidden');
+      error.classList.add('hidden');
+      grid.classList.add('hidden');
+      try {
+        const response = await fetch('./news-feed.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('Unable to fetch news');
+        const data = await response.json();
+        const latest = Array.isArray(data) ? data.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3) : [];
+        grid.innerHTML = latest.map(renderNewsCard).join('');
+        loading.classList.add('hidden');
+        grid.classList.remove('hidden');
+        grid.querySelectorAll('.reveal').forEach((el) => {
+          if (revealObserver) revealObserver.observe(el);
+          else el.classList.add('visible');
+        });
+      } catch (errorValue) {
+        loading.classList.add('hidden');
+        error.classList.remove('hidden');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadNews);
+  </script>
+</body>
+</html>

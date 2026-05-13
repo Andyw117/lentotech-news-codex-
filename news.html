@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>行业动态 News Center | Lentotech 伦拓科技</title>
+  <meta name="description" content="伦拓科技 Lentotech 新闻中心，按日期、分类和关键词检索生物医药、监管合规、CDMO、贸易物流与市场动态。">
+  <meta name="keywords" content="伦拓科技新闻,Lentotech News,生物医药行业动态,监管合规,CDMO新闻,医药贸易物流">
+  <meta name="author" content="Lentotech 伦拓科技">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#047857">
+  <link rel="canonical" href="https://lentotech.com/news.html">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lentotech.com/news.html">
+  <meta property="og:title" content="行业动态 News Center | Lentotech 伦拓科技">
+  <meta property="og:description" content="按日期、分类和关键词检索生物医药行业动态，快速联系 Lentotech 获取供应链与合规建议。">
+  <meta property="og:image" content="https://lentotech.com/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name" content="Lentotech 伦拓科技">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="行业动态 News Center | Lentotech 伦拓科技">
+  <meta name="twitter:description" content="Biopharma news archive with category filters, search, sources and inquiry actions.">
+  <meta name="twitter:image" content="https://lentotech.com/og-cover.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background: #f8fafc;
+      color: #0f172a;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-rendering: optimizeLegibility;
+    }
+    .glass-nav {
+      background: rgba(255,255,255,0.86);
+      border-bottom: 1px solid rgba(148,163,184,0.24);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+    .brand-mark {
+      background: linear-gradient(135deg, #0369a1 0%, #059669 58%, #34d399 100%);
+      box-shadow: 0 18px 36px -24px rgba(4,120,87,0.8);
+    }
+    .hero-media {
+      background-image: linear-gradient(90deg, rgba(15,23,42,0.94), rgba(15,23,42,0.8) 52%, rgba(15,23,42,0.46)), url("./og-cover.png");
+      background-position: center;
+      background-size: cover;
+    }
+    .premium-card {
+      background: rgba(255,255,255,0.96);
+      border: 1px solid rgba(226,232,240,0.96);
+      border-radius: 18px;
+      box-shadow: 0 18px 55px -42px rgba(15,23,42,0.72);
+    }
+    .news-entry {
+      background: #fff;
+      border: 1px solid rgba(226,232,240,0.96);
+      border-radius: 18px;
+      box-shadow: 0 18px 55px -46px rgba(15,23,42,0.7);
+      transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+    }
+    .news-entry:hover {
+      border-color: rgba(5,150,105,0.32);
+      box-shadow: 0 26px 70px -50px rgba(15,23,42,0.92);
+      transform: translateY(-2px);
+    }
+    .filter-btn {
+      align-items: center;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 999px;
+      color: #475569;
+      cursor: pointer;
+      display: inline-flex;
+      font-size: 0.85rem;
+      font-weight: 800;
+      min-height: 42px;
+      padding: 0.6rem 1rem;
+      transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+      white-space: nowrap;
+    }
+    .filter-btn:hover { border-color: #059669; color: #047857; transform: translateY(-1px); }
+    .filter-btn.active { background: #059669; border-color: #059669; color: #fff; }
+    .badge-regulatory { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
+    .badge-market { background: #fdf4ff; color: #7e22ce; border-color: #e9d5ff; }
+    .badge-science { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
+    .badge-cdmo { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+    .badge-trade { background: #fefce8; color: #854d0e; border-color: #fde68a; }
+    .btn-primary,
+    .btn-dark {
+      align-items: center;
+      border-radius: 999px;
+      display: inline-flex;
+      font-size: 0.92rem;
+      font-weight: 800;
+      gap: 0.5rem;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0.76rem 1.1rem;
+      text-decoration: none;
+      transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+    }
+    .btn-primary { background: #059669; color: #fff; }
+    .btn-primary:hover { background: #047857; transform: translateY(-1px) scale(1.02); }
+    .btn-dark { background: #0f172a; color: #fff; }
+    .btn-dark:hover { background: #111827; transform: translateY(-1px) scale(1.02); }
+    .spinner {
+      animation: spin 0.9s linear infinite;
+      border: 3px solid #d1fae5;
+      border-radius: 999px;
+      border-top-color: #059669;
+      height: 36px;
+      width: 36px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+    :target {
+      animation: targetPulse 2200ms ease;
+      scroll-margin-top: 140px;
+    }
+    @keyframes targetPulse {
+      0% { border-color: #059669; box-shadow: 0 0 0 5px rgba(5,150,105,0.14); }
+      100% { border-color: rgba(226,232,240,0.96); box-shadow: 0 18px 55px -46px rgba(15,23,42,0.7); }
+    }
+    @media (max-width: 767px) { body { padding-bottom: 76px; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .filter-btn:hover,
+      .news-entry:hover,
+      .btn-primary:hover,
+      .btn-dark:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-white focus:px-5 focus:py-3 focus:text-sm focus:font-bold focus:text-slate-900 focus:shadow-lg">跳转到正文 / Skip to content</a>
+
+  <header class="glass-nav sticky top-0 z-50">
+    <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="主导航 / Primary navigation">
+      <a href="index.html" class="flex min-h-12 items-center gap-3 rounded-full pr-3 no-underline" aria-label="Lentotech 首页 / Lentotech home">
+        <span class="brand-mark flex h-10 w-10 items-center justify-center rounded-xl text-white" aria-hidden="true">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7l8 4 8-4-8-4ZM4 12l8 4 8-4M4 17l8 4 8-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block text-base font-black text-slate-950">Lentotech</span>
+          <span class="block text-xs font-semibold text-emerald-700">伦拓科技</span>
+        </span>
+      </a>
+      <div class="hidden items-center gap-7 md:flex">
+        <a href="index.html#business" class="text-sm font-semibold text-slate-600 no-underline transition hover:text-emerald-700">业务 / Business</a>
+        <a href="news.html" class="text-sm font-black text-emerald-700 no-underline">动态 / News</a>
+        <a href="index.html#process" class="text-sm font-semibold text-slate-600 no-underline transition hover:text-emerald-700">流程 / Process</a>
+        <a href="index.html#contact" class="text-sm font-semibold text-slate-600 no-underline transition hover:text-emerald-700">联系 / Contact</a>
+        <a href="mailto:info@lentotech.com?subject=News%20Briefing%20Request%20%2F%20%E8%A1%8C%E4%B8%9A%E5%8A%A8%E6%80%81%E8%A7%A3%E8%AF%BB" class="btn-primary min-h-11 px-5 py-2 text-sm">咨询影响 / Ask Impact</a>
+      </div>
+      <button id="hamburger" class="inline-flex min-h-12 min-w-12 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm md:hidden" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="打开菜单 / Open menu">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="border-t border-slate-200 bg-white/95 px-4 py-3 shadow-sm md:hidden">
+      <div class="mx-auto grid max-w-7xl gap-1">
+        <a href="index.html#business" class="min-h-12 rounded-xl px-4 py-3 text-sm font-bold text-slate-700 no-underline hover:bg-emerald-50">业务 / Business</a>
+        <a href="news.html" class="min-h-12 rounded-xl px-4 py-3 text-sm font-bold text-emerald-700 no-underline hover:bg-emerald-50">动态 / News</a>
+        <a href="index.html#process" class="min-h-12 rounded-xl px-4 py-3 text-sm font-bold text-slate-700 no-underline hover:bg-emerald-50">流程 / Process</a>
+        <a href="index.html#contact" class="min-h-12 rounded-xl px-4 py-3 text-sm font-bold text-slate-700 no-underline hover:bg-emerald-50">联系 / Contact</a>
+        <a href="mailto:info@lentotech.com?subject=News%20Briefing%20Request%20%2F%20%E8%A1%8C%E4%B8%9A%E5%8A%A8%E6%80%81%E8%A7%A3%E8%AF%BB" class="mt-2 inline-flex min-h-12 items-center justify-center rounded-full bg-emerald-600 px-5 py-3 text-sm font-black text-white no-underline">咨询影响 / Ask Impact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero-media px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <nav class="text-sm font-semibold text-slate-300">
+          <a href="index.html" class="text-slate-300 no-underline hover:text-white">首页 / Home</a>
+          <span class="mx-2">/</span>
+          <span class="text-emerald-200">行业动态 / News</span>
+        </nav>
+        <div class="mt-12 grid gap-8 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-8">
+            <p class="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-black text-emerald-100 backdrop-blur">News Center / 行业动态中心</p>
+            <h1 class="mt-5 text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">更快获取行业变化，更快启动业务判断。</h1>
+            <p class="mt-5 max-w-3xl text-lg leading-relaxed text-slate-200">按分类、关键词和日期检索生物医药、合规、CDMO与贸易物流动态，并一键联系 Lentotech 获取影响评估。</p>
+          </div>
+          <div class="grid gap-3 sm:grid-cols-3 lg:col-span-4 lg:grid-cols-1">
+            <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+              <p id="hero-count" class="text-3xl font-black">--</p>
+              <p class="mt-1 text-sm text-slate-200">已发布动态 / Published entries</p>
+            </div>
+            <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+              <p id="hero-latest" class="text-lg font-black">Loading</p>
+              <p class="mt-1 text-sm text-slate-200">最新更新时间 / Latest update</p>
+            </div>
+            <a href="mailto:info@lentotech.com?subject=News%20Briefing%20Request%20%2F%20%E8%A1%8C%E4%B8%9A%E5%8A%A8%E6%80%81%E8%A7%A3%E8%AF%BB" class="btn-primary">请求新闻解读 / Request Briefing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sticky top-16 z-40 border-b border-slate-200 bg-white/92 px-4 py-3 backdrop-blur sm:px-6 lg:px-8">
+      <div class="mx-auto grid max-w-7xl gap-3 lg:grid-cols-[320px_1fr] lg:items-center">
+        <label class="relative block">
+          <span class="sr-only">搜索新闻 / Search news</span>
+          <svg class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.3-4.3M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+          <input id="news-search" class="h-12 w-full rounded-full border border-slate-200 bg-white pl-11 pr-4 text-sm font-semibold text-slate-800 outline-none transition focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100" type="search" placeholder="搜索关键词 / Search keyword">
+        </label>
+        <div class="flex gap-2 overflow-x-auto pb-1" style="scrollbar-width: none;">
+          <button class="filter-btn active" type="button" data-cat="all">全部 / All</button>
+          <button class="filter-btn" type="button" data-cat="regulatory">监管合规</button>
+          <button class="filter-btn" type="button" data-cat="market">市场动态</button>
+          <button class="filter-btn" type="button" data-cat="science">科学前沿</button>
+          <button class="filter-btn" type="button" data-cat="cdmo">CDMO</button>
+          <button class="filter-btn" type="button" data-cat="trade">贸易物流</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[320px_1fr]">
+        <aside class="space-y-5 lg:sticky lg:top-36 lg:self-start">
+          <div class="premium-card p-5">
+            <p class="text-xs font-black uppercase tracking-[0.14em] text-emerald-700">Quick Actions / 快捷操作</p>
+            <div class="mt-5 grid gap-3">
+              <a class="btn-primary w-full" href="mailto:info@lentotech.com?subject=News%20Briefing%20Request%20%2F%20%E8%A1%8C%E4%B8%9A%E5%8A%A8%E6%80%81%E8%A7%A3%E8%AF%BB">请求解读 / Ask Impact</a>
+              <a class="btn-dark w-full" href="mailto:info@lentotech.com?subject=Subscribe%20to%20Lentotech%20News%20%2F%20%E8%AE%A2%E9%98%85%E4%BC%A6%E6%8B%93%E5%8A%A8%E6%80%81">订阅动态 / Subscribe</a>
+              <a class="flex min-h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-black text-slate-700 no-underline hover:border-emerald-500 hover:text-emerald-700" href="https://wa.me/?text=https%3A%2F%2Flentotech.com%2Fnews.html%20Lentotech%20News%20Center%20%E4%BC%A6%E6%8B%93%E7%A7%91%E6%8A%80%E8%A1%8C%E4%B8%9A%E5%8A%A8%E6%80%81" target="_blank" rel="noopener noreferrer">WhatsApp 分享</a>
+            </div>
+          </div>
+          <div class="premium-card p-5">
+            <p class="text-xs font-black uppercase tracking-[0.14em] text-slate-500">News Update / 新闻更新</p>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">此页面自动读取 news-feed.json。维护者只需新增一条 JSON 新闻并推送，归档、筛选与首页预览会自动更新。</p>
+          </div>
+        </aside>
+
+        <div>
+          <div id="news-loading" class="flex flex-col items-center justify-center gap-4 rounded-2xl border border-slate-200 bg-white py-20">
+            <div class="spinner"></div>
+            <p class="text-sm font-semibold text-slate-500">加载新闻中 / Loading news</p>
+          </div>
+          <div id="news-error" class="hidden rounded-2xl border border-rose-100 bg-white p-8 text-center">
+            <p class="text-lg font-black text-slate-950">暂时无法加载新闻 / Unable to load news</p>
+            <p class="mt-2 text-sm text-slate-500">请检查 news-feed.json 是否存在且格式正确。</p>
+            <button class="btn-primary mt-5" type="button" onclick="loadNews()">重试 / Retry</button>
+          </div>
+          <div id="archive-container" class="hidden space-y-10"></div>
+          <div id="no-results" class="hidden rounded-2xl border border-slate-200 bg-white p-10 text-center">
+            <p class="text-xl font-black text-slate-950">未找到匹配动态 / No matching entries</p>
+            <p class="mt-2 text-sm text-slate-500">请尝试其他关键词或切换到全部分类。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/95 px-3 py-3 shadow-[0_-14px_35px_-28px_rgba(15,23,42,0.75)] backdrop-blur md:hidden">
+    <div class="grid grid-cols-3 gap-2">
+      <a class="rounded-full bg-slate-950 px-3 py-3 text-center text-xs font-black text-white no-underline" href="index.html">首页</a>
+      <a class="rounded-full bg-emerald-600 px-3 py-3 text-center text-xs font-black text-white no-underline" href="mailto:info@lentotech.com?subject=News%20Briefing%20Request">咨询影响</a>
+      <a class="rounded-full border border-slate-200 bg-white px-3 py-3 text-center text-xs font-black text-slate-800 no-underline" href="#main">筛选动态</a>
+    </div>
+  </div>
+
+  <footer class="bg-slate-950 px-4 py-10 text-slate-400 sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 border-t border-slate-800 pt-8 md:flex-row md:items-center md:justify-between">
+      <div class="flex items-center gap-3">
+        <span class="brand-mark flex h-9 w-9 items-center justify-center rounded-xl text-white" aria-hidden="true"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7l8 4 8-4-8-4ZM4 12l8 4 8-4M4 17l8 4 8-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        <div><p class="font-black text-white">Lentotech 伦拓科技</p><p class="text-sm">News Center / 行业动态中心</p></div>
+      </div>
+      <p class="text-sm">© 2026 伦拓科技 Lentotech. All rights reserved.</p>
+      <div class="flex flex-wrap gap-4 text-sm">
+        <a href="index.html" class="font-semibold text-slate-400 no-underline hover:text-emerald-300">首页 / Home</a>
+        <a href="news.html" class="font-semibold text-slate-400 no-underline hover:text-emerald-300">动态 / News</a>
+        <a href="index.html#contact" class="font-semibold text-slate-400 no-underline hover:text-emerald-300">联系 / Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', () => {
+        const open = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', String(!open));
+        hamburger.setAttribute('aria-label', open ? '打开菜单 / Open menu' : '关闭菜单 / Close menu');
+        mobileMenu.classList.toggle('open', !open);
+      });
+      mobileMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.setAttribute('aria-label', '打开菜单 / Open menu');
+          mobileMenu.classList.remove('open');
+        });
+      });
+    }
+
+    const CATEGORY_META = {
+      regulatory: { label: '监管合规 / Regulatory', cls: 'badge-regulatory' },
+      market: { label: '市场动态 / Market', cls: 'badge-market' },
+      science: { label: '科学前沿 / Science', cls: 'badge-science' },
+      cdmo: { label: 'CDMO资讯 / CDMO', cls: 'badge-cdmo' },
+      trade: { label: '贸易物流 / Trade', cls: 'badge-trade' }
+    };
+    const MONTH_NAMES_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const MONTH_NAMES_ZH = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+    let allNews = [];
+    let currentCategory = 'all';
+    let currentSearch = '';
+
+    function escapeHTML(value) {
+      return String(value || '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+    }
+
+    function safeUrl(value) {
+      try {
+        const url = new URL(value);
+        return ['http:', 'https:'].includes(url.protocol) ? url.href : '#';
+      } catch (error) {
+        return '#';
+      }
+    }
+
+    function sourceLabel(value) {
+      try {
+        return new URL(value).hostname.replace(/^www\./, '');
+      } catch (error) {
+        return 'Source';
+      }
+    }
+
+    function formatFullDate(dateString) {
+      const date = new Date(`${dateString}T00:00:00`);
+      if (Number.isNaN(date.getTime())) return escapeHTML(dateString);
+      const zh = `${date.getFullYear()}年${MONTH_NAMES_ZH[date.getMonth()]}${date.getDate()}日`;
+      const en = `${MONTH_NAMES_EN[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+      return `${zh} / ${en}`;
+    }
+
+    function monthKey(dateString) {
+      const date = new Date(`${dateString}T00:00:00`);
+      return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+    }
+
+    function monthHeading(key) {
+      const [year, month] = key.split('-');
+      const index = Number(month) - 1;
+      return `${year}年${MONTH_NAMES_ZH[index]} / ${MONTH_NAMES_EN[index]} ${year}`;
+    }
+
+    function entryMatches(item) {
+      const categoryMatch = currentCategory === 'all' || item.category === currentCategory;
+      const haystack = [item.title_zh, item.title_en, item.excerpt_zh, item.excerpt_en, item.category].join(' ').toLowerCase();
+      const searchMatch = !currentSearch || haystack.includes(currentSearch.toLowerCase());
+      return categoryMatch && searchMatch;
+    }
+
+    function renderEntry(item) {
+      const meta = CATEGORY_META[item.category] || { label: item.category || 'News', cls: 'badge-cdmo' };
+      const source = safeUrl(item.url);
+      const mailSubject = encodeURIComponent(`Question about: ${item.title_en || item.title_zh || 'Lentotech news'}`);
+      const mailBody = encodeURIComponent(`I would like to understand the supply chain or regulatory impact of this news:\n\n${item.title_en || item.title_zh}\n${source}`);
+      return `
+        <article id="entry-${encodeURIComponent(item.id)}" class="news-entry p-5 sm:p-6" data-cat="${escapeHTML(item.category)}">
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="${meta.cls} rounded-full border px-3 py-1 text-xs font-black">${escapeHTML(meta.label)}</span>
+              <time class="text-xs font-bold text-slate-400" datetime="${escapeHTML(item.date)}">${formatFullDate(item.date)}</time>
+            </div>
+            <span class="text-xs font-bold text-slate-400">${escapeHTML(sourceLabel(source))}</span>
+          </div>
+          <h2 class="mt-5 text-xl font-black leading-snug text-slate-950">${escapeHTML(item.title_zh)}</h2>
+          <p class="mt-2 text-sm font-semibold leading-relaxed text-slate-500">${escapeHTML(item.title_en)}</p>
+          <p class="mt-5 leading-relaxed text-slate-700">${escapeHTML(item.excerpt_zh)}</p>
+          <p class="mt-3 text-sm leading-relaxed text-slate-500">${escapeHTML(item.excerpt_en)}</p>
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a class="btn-dark" href="${escapeHTML(source)}" target="_blank" rel="noopener noreferrer">阅读来源 / Read Source</a>
+            <a class="btn-primary" href="mailto:info@lentotech.com?subject=${mailSubject}&body=${mailBody}">咨询影响 / Ask Impact</a>
+            <a class="inline-flex min-h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-black text-slate-700 no-underline hover:border-emerald-500 hover:text-emerald-700" href="mailto:?subject=${mailSubject}&body=${mailBody}">转发邮件 / Forward</a>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderArchive() {
+      const container = document.getElementById('archive-container');
+      const noResults = document.getElementById('no-results');
+      const filtered = allNews.filter(entryMatches).sort((a, b) => new Date(b.date) - new Date(a.date));
+      if (filtered.length === 0) {
+        container.classList.add('hidden');
+        noResults.classList.remove('hidden');
+        return;
+      }
+      const groups = filtered.reduce((acc, item) => {
+        const key = monthKey(item.date);
+        if (!acc[key]) acc[key] = [];
+        acc[key].push(item);
+        return acc;
+      }, {});
+      container.innerHTML = Object.keys(groups).sort((a, b) => b.localeCompare(a)).map((key) => `
+        <section class="space-y-4">
+          <div class="flex items-center gap-4">
+            <h2 class="shrink-0 text-2xl font-black text-slate-950">${monthHeading(key)}</h2>
+            <div class="h-px flex-1 bg-gradient-to-r from-slate-300 to-transparent"></div>
+            <span class="shrink-0 rounded-full bg-white px-3 py-1 text-xs font-black text-slate-500">${groups[key].length} 篇 / entries</span>
+          </div>
+          <div class="grid gap-5">${groups[key].map(renderEntry).join('')}</div>
+        </section>
+      `).join('');
+      container.classList.remove('hidden');
+      noResults.classList.add('hidden');
+    }
+
+    function updateHeroStats(data) {
+      const count = document.getElementById('hero-count');
+      const latest = document.getElementById('hero-latest');
+      const sorted = [...data].sort((a, b) => new Date(b.date) - new Date(a.date));
+      if (count) count.textContent = String(data.length);
+      if (latest && sorted[0]) latest.textContent = formatFullDate(sorted[0].date);
+    }
+
+    async function loadNews() {
+      const loading = document.getElementById('news-loading');
+      const error = document.getElementById('news-error');
+      const container = document.getElementById('archive-container');
+      const noResults = document.getElementById('no-results');
+      loading.classList.remove('hidden');
+      error.classList.add('hidden');
+      container.classList.add('hidden');
+      noResults.classList.add('hidden');
+      try {
+        const response = await fetch('./news-feed.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('Unable to fetch news');
+        const data = await response.json();
+        allNews = Array.isArray(data) ? data : [];
+        updateHeroStats(allNews);
+        loading.classList.add('hidden');
+        renderArchive();
+        if (window.location.hash) {
+          setTimeout(() => {
+            const target = document.querySelector(window.location.hash);
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 180);
+        }
+      } catch (errorValue) {
+        loading.classList.add('hidden');
+        error.classList.remove('hidden');
+      }
+    }
+
+    document.querySelectorAll('.filter-btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach((item) => item.classList.remove('active'));
+        button.classList.add('active');
+        currentCategory = button.dataset.cat || 'all';
+        renderArchive();
+      });
+    });
+
+    const search = document.getElementById('news-search');
+    if (search) {
+      search.addEventListener('input', () => {
+        currentSearch = search.value.trim();
+        renderArchive();
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', loadNews);
+  </script>
+</body>
+</html>
